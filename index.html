@@ -8,14 +8,25 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="Container">
     <div id="box1">
         <h1>Mis Tareas del Dia </h1>
         <p>Agrega, organiza y completa tus tareas diarias.</p>
         <fieldset>
             <h3>Agregar nueva Tarea</h3>
-            <p>Tarea</p>
-            <input type="text" id="Ingresar_tarea" placeholder="¿Que necesitas hacer?">
+            <div>
+                <p>Tarea</p>
+                <input type="text" id="Ingresar_tarea" placeholder="¿Que necesitas hacer?">
+                <p>Prioridad</p>
+                <select id="Prioridad">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <P>Fecha</P>
+                <input type="date" id="Fecha">
+                <button id="Agregar">Agregar Tarea</button>
+            </div>
         </fieldset>
     </div>
 
