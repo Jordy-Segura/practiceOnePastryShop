@@ -9,23 +9,55 @@
 </head>
 
 <body id="Container">
+    <div id="menu">
+        <h1>Mis Tareas</h1>
+        <p>Organiza tu dia</p>
+        <div id="m_Tareas"></div>
+        <div id="m_pendientes"></div>
+        <div id="m_completadas"></div>
+        <div id="m_Calendario"></div>
+        <div id="m_Estadisticas"></div>
+        <div id="m_Ajustes"></div>
+    </div>
     <div id="box1">
         <h1>Mis Tareas del Dia </h1>
         <p>Agrega, organiza y completa tus tareas diarias.</p>
         <fieldset>
             <h3>Agregar nueva Tarea</h3>
             <div>
-                <p>Tarea</p>
-                <input type="text" id="Ingresar_tarea" placeholder="¿Que necesitas hacer?">
-                <p>Prioridad</p>
-                <select id="Prioridad">
+                <div>
+                    <p>Tarea</p>
+                    <input type="text" id="Ingresar_tarea" placeholder="¿Que necesitas hacer?">
+                </div>
+                <div>
+                    <p>Prioridad</p>
+                    <select id="Prioridad">
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+                <div>
+                    <P>Fecha</P>
+                    <input type="date" id="Fecha">
+                </div>
+                <div>
+                    <button id="Agregar"> + Agregar Tarea</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <h3>Filtrar Tareas</h3>
+            <div>
+                <p>Filtrar por prioridad:</p>
+                <select id="Filtrar_Prioridad">
+                    <option value="todas">Todas</option>
                     <option value="baja">Baja</option>
                     <option value="media">Media</option>
                     <option value="alta">Alta</option>
                 </select>
-                <P>Fecha</P>
-                <input type="date" id="Fecha">
-                <button id="Agregar">Agregar Tarea</button>
+
             </div>
         </fieldset>
     </div>
