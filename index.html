@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,14 +11,16 @@
 
 <body id="Container">
     <div id="menu">
-        <h1>Mis Tareas</h1>
-        <p>Organiza tu dia</p>
-        <div id="m_Tareas"></div>
-        <div id="m_pendientes"></div>
-        <div id="m_completadas"></div>
-        <div id="m_Calendario"></div>
-        <div id="m_Estadisticas"></div>
-        <div id="m_Ajustes"></div>
+        <fieldset>
+            <h1>Mis Tareas</h1>
+            <p>Organiza tu dia</p>
+            <div id="m_Tareas"></div>
+            <div id="m_pendientes"></div>
+            <div id="m_completadas"></div>
+            <div id="m_Calendario"></div>
+            <div id="m_Estadisticas"></div>
+            <div id="m_Ajustes"></div>
+        </fieldset>
     </div>
     <div id="box1">
         <h1>Mis Tareas del Dia </h1>
@@ -48,40 +51,41 @@
         </fieldset>
 
         <fieldset>
-            <h3>Filtrar Tareas</h3>
+            <div class="filters">
+                <span>Filtrar tareas:</span>
+                <button>Todas</button>
+                <button>Pendientes</button>
+                <button>Completadas</button>
+            </div>
+
+
+            <div class="summary">
+                <div>
+                    <fieldset>Total: <span>5</span></fieldset>
+                </div>
+
+                <fieldset>
+                    <div>Pendientes: <span>3</span></div>
+                </fieldset>
+                <fieldset>
+                    <div>Completadas: <span>2</span></div>
+                </fieldset>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <h2>Listar Tareas</h2>
             <div>
-                <p>Filtrar por prioridad:</p>
-                <select id="Filtrar_Prioridad">
-                    <option value="todas">Todas</option>
-                    <option value="baja">Baja</option>
-                    <option value="media">Media</option>
-                    <option value="alta">Alta</option>
-                </select>
+
 
             </div>
         </fieldset>
-        <div class="filters">
-            <span>Filtrar tareas:</span>
-            <button>Todas</button>
-            <button>Pendientes</button>
-            <button>Completadas</button>
-        </div>
-
-        
-        <div class="summary">
-            <div>
-                <fieldset>Total: <span>5</span></div></fieldset>
-            <fieldset><div>Pendientes: <span>3</span></div></fieldset>
-            <fieldset><div>Completadas: <span>2</span></div></fieldset>
-        </div>
-
-        
 
         <div class="footer">
             <p>© 2024 Mis Tareas del Día | Hecho por Estudiante Web</p>
         </div>
 
-</div>
+    </div>
 </body>
 <script src="js/script.js"></script>
 
