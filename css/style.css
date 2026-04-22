@@ -10,6 +10,15 @@ body {
   color: #4a2a0f;
 }
 
+label,
+.fecha,
+#cabecera p,
+.dato small,
+.vacio,
+#pie {
+  color: #9b6b3a;
+}
+
 #cabecera,
 #perfil,
 #barra,
@@ -20,16 +29,7 @@ body {
 .accion {
   display: flex;
   align-items: center;
-}
-
-label,
-.fecha,
-#cabecera p,
-.dato small,
-.vacio,
-#pie {
-  color: #9b6b3a;
-}
+} 
 
 input,
 select,
@@ -161,15 +161,16 @@ label,
   color: #ffe8c8;
 }
 
-.enlace:hover {
-  background: #5c2006;
-  border-left-color: #f4a460;
-}
 
 .enlace.activo {
   background: #4a1a00;
   border-left-color: #f4a460;
   font-weight: bold;
+}
+
+.enlace:hover {
+  background: #5c2006;
+  border-left-color: #f4a460;
 }
 
 #barra {
@@ -207,13 +208,13 @@ label,
   border-bottom: 2px solid #e8c49a;
 }
 
-#cabecera h1 {
-  font-size: 26px;
-}
-
 #cabecera p {
   font-size: 13px;
   margin-top: 5px;
+}
+
+#cabecera h1 {
+  font-size: 26px;
 }
 
 #perfil {
@@ -389,13 +390,13 @@ select:focus {
   color: #fff;
 }
 
-.nombre {
-  font-size: 14px;
-}
-
 .nombre.tachada {
   text-decoration: line-through;
   color: #b09070;
+}
+
+.nombre {
+  font-size: 14px;
 }
 
 .etiqueta {
