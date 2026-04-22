@@ -1,92 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Dulces Tareas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
 
-<body id="Container">
-    <div id="menu">
-        <fieldset>
-            <h1>Mis Tareas</h1>
-            <p>Organiza tu dia</p>
-            <div id="m_Tareas"></div>
-            <div id="m_pendientes"></div>
-            <div id="m_completadas"></div>
-            <div id="m_Calendario"></div>
-            <div id="m_Estadisticas"></div>
-            <div id="m_Ajustes"></div>
-        </fieldset>
+  <div id="barra">
+    <button id="btn-menu"><i class="fa-solid fa-bars"></i></button>
+    <span><i class="fa-solid fa-cake-candles"></i> Mis Dulces Tareas</span>
+  </div>
+
+  <div id="menu">
+    <button class="enlace" data-filtro="todas"><i class="fa-solid fa-cake-candles"></i> Todas</button>
+    <button class="enlace" data-filtro="pendientes"><i class="fa-solid fa-clock"></i> Pendientes</button>
+    <button class="enlace" data-filtro="completadas"><i class="fa-solid fa-check-circle"></i> Completadas</button>
+    <button class="enlace"><i class="fa-solid fa-gear"></i> Ajustes</button>
+  </div>
+
+  <div id="estructura">
+
+    <div id="lateral">
+      <div id="cab-lateral">
+        <i class="fa-solid fa-cake-candles"></i>
+        <b>Mis Dulces Tareas</b>
+        <small>Organiza tu día</small>
+      </div>
+
+      <div id="nav-lateral">
+        <button class="enlace activo" data-filtro="todas"><i class="fa-solid fa-cake-candles"></i> Todas las tareas</button>
+        <button class="enlace" data-filtro="pendientes"><i class="fa-solid fa-clock"></i> Pendientes</button>
+        <button class="enlace" data-filtro="completadas"><i class="fa-solid fa-check-circle"></i> Completadas</button>
+        <hr>
+        <button class="enlace"><i class="fa-solid fa-calendar-days"></i> Calendario</button>
+        <button class="enlace"><i class="fa-solid fa-chart-column"></i> Estadísticas</button>
+        <button class="enlace"><i class="fa-solid fa-gear"></i> Ajustes</button>
+      </div>
+
+      <div id="promo">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <p>"La disciplina es el ingrediente secreto de toda receta exitosa."</p>
+      </div>
     </div>
-    <div id="box1">
-        <h1>Mis Tareas del Dia </h1>
-        <p>Agrega, organiza y completa tus tareas diarias.</p>
-        <fieldset>
-            <h3>Agregar nueva Tarea</h3>
-            <div>
-                <div>
-                    <p>Tarea</p>
-                    <input type="text" id="Ingresar_tarea" placeholder="¿Que necesitas hacer?">
-                </div>
-                <div>
-                    <p>Prioridad</p>
-                    <select id="Prioridad">
-                        <option value="baja">Baja</option>
-                        <option value="media">Media</option>
-                        <option value="alta">Alta</option>
-                    </select>
-                </div>
-                <div>
-                    <P>Fecha</P>
-                    <input type="date" id="Fecha">
-                </div>
-                <div>
-                    <button id="Agregar"> + Agregar Tarea</button>
-                </div>
-            </div>
-        </fieldset>
 
-        <fieldset>
-            <div class="filters">
-                <span>Filtrar tareas:</span>
-                <button>Todas</button>
-                <button>Pendientes</button>
-                <button>Completadas</button>
-            </div>
+    <div id="contenido">
 
-
-            <div class="summary">
-                <div>
-                    <fieldset>Total: <span>5</span></fieldset>
-                </div>
-
-                <fieldset>
-                    <div>Pendientes: <span>3</span></div>
-                </fieldset>
-                <fieldset>
-                    <div>Completadas: <span>2</span></div>
-                </fieldset>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <h2>Listar Tareas</h2>
-            <div>
-
-
-            </div>
-        </fieldset>
-
-        <div class="footer">
-            <p>© 2024 Mis Tareas del Día | Hecho por Estudiante Web</p>
+      <div id="cabecera">
+        <div>
+          <h1><i class="fa-solid fa-cake-candles"></i> Mis Dulces Tareas del Día</h1>
+          <p>Agrega, organiza y completa tus recetas y pendientes</p>
         </div>
+        <div id="perfil"><i class="fa-solid fa-user"></i></div>
+      </div>
+
+      <div class="tarjeta">
+        <h2><i class="fa-solid fa-plus"></i> Agregar nueva tarea</h2>
+        <div id="formulario">
+          <div class="campo grande">
+            <label>Tarea</label>
+            <input type="text" id="inp-tarea" placeholder="¿Qué necesitas hornear?">
+            <small id="error" class="error"></small>
+          </div>
+          <div class="campo">
+            <label>Prioridad</label>
+            <select id="inp-prio">
+              <option>Media</option>
+              <option>Alta</option>
+              <option>Baja</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Fecha</label>
+            <input type="date" id="inp-fecha">
+          </div>
+        </div>
+        <button id="btn-agregar"><i class="fa-solid fa-bread-slice"></i> Agregar Tarea</button>
+      </div>
+
+      <div class="tarjeta">
+        <h2><i class="fa-solid fa-filter"></i> Filtrar tareas</h2>
+        <div id="filtros">
+          <div>
+            <button class="filtro activo" data-filtro="todas"><i class="fa-solid fa-cake-candles"></i> Todas</button>
+            <button class="filtro" data-filtro="pendientes"><i class="fa-solid fa-clock"></i> Pendientes</button>
+            <button class="filtro" data-filtro="completadas"><i class="fa-solid fa-check-circle"></i> Completadas</button>
+          </div>
+          <div id="datos">
+            <div class="dato"><span id="tot">0</span><small>Total</small></div>
+            <div class="dato"><span id="pend">0</span><small>Pendientes</small></div>
+            <div class="dato"><span id="comp">0</span><small>Completadas</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <h2><i class="fa-solid fa-clipboard-list"></i> Lista de tareas</h2>
+        <div id="lista"></div>
+      </div>
+
+      <div id="pie">
+        © 2024 Mis Dulces Tareas &nbsp;|&nbsp; Hecho con <i class="fa-solid fa-heart"></i> por Estudiante Web
+      </div>
 
     </div>
-</body>
-<script src="js/script.js"></script>
+  </div>
 
+  <script src="js/script.js"></script>
+</body>
 </html>
