@@ -52,8 +52,13 @@ function agregar() {
     $nom.focus()
     return
   }
+  if (!$fec.value) {
+    $error.textContent = "Por favor selecciona una fecha para la tarea."
+    $fec.focus()
+    return
+  }
   $error.textContent = ""
-  const fecha = $fec.value ? $fec.value.split("-").reverse().join("/") : "Sin fecha";
+  const fecha = $fec.value.split("-").reverse().join("/")
   tareas.push({ id: sigId++, nombre, prio: $prio.value, fecha, hecha: false });
   $nom.value = $fec.value = ""
   mostrar()
