@@ -1,8 +1,11 @@
-const INSIGNIA = {
+const prioridad = {
   Alta: { ico: "fa-fire", clase: "alta" },
   Media: { ico: "fa-star", clase: "media" },
   Baja: { ico: "fa-leaf", clase: "baja" },
-};
+}
+
+
+
 
 let tareas = [
   { id: 1, nombre: "Hornear pastel de chocolate", prio: "Alta", fecha: "24/05/2026", hecha: false },
@@ -10,17 +13,22 @@ let tareas = [
   { id: 3, nombre: "Hacer croissants de mantequilla", prio: "Baja", fecha: "23/05/2026", hecha: true },
   { id: 4, nombre: "Decorar cupcakes de fresa", prio: "Baja", fecha: "25/05/2026", hecha: false },
   { id: 5, nombre: "Comprar harina, azúcar y huevos", prio: "Media", fecha: "23/05/2026", hecha: false },
-];
+]
 
-let filtro = "todas";
-let sigId = 6;
 
-const $lista = document.getElementById("lista");
-const $nom = document.getElementById("inp-tarea");
-const $prio = document.getElementById("inp-prio");
-const $fec = document.getElementById("inp-fecha");
-const $menu = document.getElementById("menu");
-const $error = document.getElementById("error");
+
+let filtro = "todas"
+let sigId = 6
+
+
+
+
+const $lista = document.getElementById("lista")
+const $nom = document.getElementById("inp-tarea")
+const $prio = document.getElementById("inp-prio")
+const $fec = document.getElementById("inp-fecha")
+const $menu = document.getElementById("menu")
+const $error = document.getElementById("error")
 
 // Eventos 
 document.getElementById("btn-agregar").addEventListener("click", agregar);
@@ -103,7 +111,7 @@ function crearTarea(t) {
   nom.className = "nombre" + (t.hecha ? " tachada" : "");
   nom.textContent = t.nombre;
 
-  const { ico: icono, clase } = INSIGNIA[t.prio];
+  const { ico: icono, clase } = prioridad[t.prio];
   const ins = document.createElement("span");
   ins.className = `etiqueta ${clase}`;
   ins.append(ico("fa-solid", icono), ` ${t.prio}`);
