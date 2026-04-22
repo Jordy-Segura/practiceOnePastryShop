@@ -10,67 +10,37 @@ body {
   color: #4a2a0f;
 }
 
-label,
-.fecha,
-#cabecera p,
-.dato small,
-.vacio,
-#pie {
+label, .fecha, #cabecera p, .dato small, .vacio, #pie {
   color: #9b6b3a;
 }
 
-#cabecera,
-#perfil,
-#barra,
-.tarea,
-.izq,
-.der,
-.caja,
-.accion {
+#cabecera, #perfil, #barra, .tarea, .izq, .der, .caja, .accion {
   display: flex;
   align-items: center;
 } 
 
-input,
-select,
-.dato,
-.tarea,
-.accion {
+input, select, .dato, .tarea, .accion {
   background: #fff;
   border: 1px solid #e8c49a;
 }
 
-.enlace,
-.filtro,
-.caja,
-.accion,
-#btn-agregar,
-#btn-menu {
+.enlace, .filtro, .caja, .accion, #btn-agregar, #btn-menu {
   cursor: pointer;
 }
 
-.tarjeta h2 i,
-.enlace i,
-.filtro i,
-.fecha i {
+.tarjeta h2 i, .enlace i, .filtro i, .fecha i {
   margin-right: 6px;
 }
 
-label,
-.error,
-.fecha,
-#pie {
+label, .error, .fecha, #pie {
   font-size: 12px;
 }
 
-.dato small,
-#promo p {
+.dato small, #promo p {
   font-size: 11px;
 }
 
-.vacio,
-#pie,
-.dato {
+.vacio, #pie, .dato {
   text-align: center;
 }
 
@@ -87,8 +57,7 @@ label,
   color: #ffe8c8;
 }
 
-#cab-lateral,
-#promo {
+#cab-lateral, #promo {
   background: #5c2006;
   text-align: center;
 }
@@ -98,8 +67,7 @@ label,
   border-bottom: 2px solid #4a1a00;
 }
 
-#cab-lateral i,
-#promo i {
+#cab-lateral i, #promo i {
   display: block;
 }
 
@@ -124,8 +92,7 @@ label,
   border-radius: 8px;
 }
 
-#promo i,
-#promo p {
+#promo i, #promo p {
   color: #c97d4e;
 }
 
@@ -263,8 +230,7 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-select {
+input, select {
   padding: 9px 12px;
   border-radius: 6px;
   font-size: 14px;
@@ -272,8 +238,7 @@ select {
   color: #4a2a0f;
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
   border-color: #c97d4e;
   outline: none;
 }
@@ -320,8 +285,7 @@ select:focus {
   font-family: inherit;
 }
 
-.filtro:hover,
-.filtro.activo {
+.filtro:hover, .filtro.activo {
   background: #c97d4e;
   color: #fff;
   border-color: #7a3008;
